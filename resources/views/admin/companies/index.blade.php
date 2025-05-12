@@ -3,7 +3,6 @@
 @section('content')
 
 <div class="container-fluid py-4">
-    @include('partials.statistics')
 
     <div class="container-fluid py-4">
         <a href="{{route('companies.create')}}" class="btn bg-gradient-primary submit" id="create">إضافة</a>

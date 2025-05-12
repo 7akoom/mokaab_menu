@@ -2,13 +2,14 @@
 
 namespace App\Http\Requests\Company;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreCompanyRequest extends FormRequest
 {
     public function authorize(): bool
     {
-        return false;
+        return Auth::guard('web')->check();
     }
 
     public function rules(): array
